@@ -1,0 +1,134 @@
+aside {
+  header {
+    display: flex;
+    align-items: center;
+
+    gap: 0.4rem;
+    padding: 1rem;
+    img {
+      width: 2rem;
+    }
+    p {
+      font-size: 1.3rem;
+      line-height: 1.2rem;
+      font-family: fraunces_nom;
+      .orange_text {
+        color: var(--Terracotta600);
+        font-family: fraunces;
+        font-weight: 600;
+        font-style: italic;
+      }
+      span:nth-of-type(2) {
+        font-weight: 600;
+      }
+    }
+  }
+  nav {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  aside {
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    min-width:13rem ;
+    hr {
+      width: 95%;
+      margin: 0 auto;
+    }
+    > nav {
+      flex-direction: column;
+      justify-content: space-between;
+      font-weight: 500;
+      display: flex;
+      flex-grow: 1;
+      padding: 0.7rem;
+
+      section.nav_main {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.2rem;
+          li {
+            font-family: dm_sans;
+            cursor: pointer;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            &:hover {
+              background-color: var(--Neutral0);
+            }
+            &:hover{
+              outline: 1px solid var(--Terracotta600);
+            
+            }
+            &:first-child{
+            position: relative;
+             background-color: var(--Neutral0);
+              &::after {
+              position: absolute;
+              right: 0.5rem;
+              content: "1";
+              font-size: 0.6rem;
+              padding: 0.2rem 0.45rem;
+              border-radius: 50%;
+              background-color: var(--Terracotta600);
+              text-align: center;
+              color: white;
+            }
+            }
+          }
+        }
+      }
+      >section.bottom{
+        >hr{
+          margin: 1rem 0;
+        }
+        >article{
+          /* background: linear-gradient(45deg, blue, green); */
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          border-radius: 1rem;
+          background-color: var(--Sun200);
+          background-image: url(../assets/images/icon-weather.svg);
+          background-repeat: no-repeat;
+          background-position: calc(100% + 10px) -30px;
+          p:first-child{
+            font-family: dm_mono;
+            color: var(--Neutral800);
+            font-weight: 300;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+          }
+          h3{
+            font-family: fraunces_nom;
+            font-size: 1.7rem;
+            font-weight: 400;
+          }
+          p:last-child{
+             font-family: dm_sans;
+            color: var(--Neutral800);
+            font-weight: 500;
+            font-size: 0.7rem;
+          }
+        }
+        footer{
+          font-family: dm_mono;
+          text-transform: uppercase;
+          font-size: 0.6rem;
+          color: var(--Neutral600);
+          display: flex;
+          flex-direction: column;
+          gap: 0.7rem;
+      
+        }
+      }
+    }
+  }
+}
